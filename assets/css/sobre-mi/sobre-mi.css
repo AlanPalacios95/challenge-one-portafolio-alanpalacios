@@ -1,0 +1,28 @@
+.sobre-mi {
+  background: #7cb490; 
+  background: -webkit-linear-gradient(to top, #3a6073, #3a7bd5); 
+  background: linear-gradient(
+    to top,
+    #3a6073,
+    #3a7bd5
+  ); 
+  padding: 4rem;
+}
+
+
+.sobre-mi__title {
+  font-weight: 700;
+  font-size: 1.9rem;
+  padding-bottom: 1rem;
+  color: var(--color-banner-title);
+
+}
+
+.sobre-mi__text {
+  font-weight: 400;
+  text-align: justify;
+  color: var(--color-text);
+  line-height: 1.525rem;
+}
+
+

@@ -1,0 +1,148 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 4.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background: linear-gradient(
+    to right,
+    #050005,
+    #f0120a
+  );
+  color: var(--color-blanco);
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.menu__list {
+  flex-direction: column;
+  position: fixed;
+  top: 4.55rem;
+  right: 0;
+  height: fit-content;
+  width: 18rem;
+  z-index: 3;
+  display: none;
+  perspective: 300px;
+}
+
+.menu__item {
+  font-weight: 500;
+  width: 100%;
+  height: 5.3rem;
+  animation: flipNavItem 200ms ease forwards;
+  transform-origin: top;
+}
+
+.menu__item:nth-child(2) {
+  animation-delay: 100ms;
+}
+.menu__item:nth-child(3) {
+  animation-delay: 200ms;
+}
+.menu__item:nth-child(4) {
+  animation-delay: 300ms;
+}
+.menu__item:nth-child(5) {
+  animation-delay: 400ms;
+}
+.menu__item:nth-child(6) {
+  animation-delay: 500ms;
+}
+
+@keyframes flipNavItem {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.menu__item--contacto {
+  font-weight: 700;
+}
+
+.menu__link {
+  transition: all 700ms ease;
+  background: var(--background-nav);
+  box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.menu__link:hover {
+  color: var(--color-dark);
+  text-decoration: var(--line-color) double underline;
+  background: var(--background-light);
+}
+
+.menu__open, .menu__close {
+  display: inline-block;
+  margin-right: 1.4rem;
+  background: transparent;
+  color: var(--color-blanco);
+  cursor: pointer;
+  border: none;
+  font-size: 2.4rem;
+}
+
+.menu__close {
+  display: none;
+}
+
+/* PARA TABLETS */
+
+@media screen and (min-width: 768px) {
+  .header {
+    box-sizing: border-box;
+    padding-right: 1rem;
+  }
+}
+
+/* PARA PC */
+
+@media screen and (min-width: 1024px) {
+  .header {
+    box-sizing: border-box;
+    padding-left: 2rem;
+  }
+
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 3;
+    width: 49%;
+    padding-right: 5rem;
+    top: 0;
+    gap: 1rem;
+  }
+
+  .menu__item {
+    height: 4.5rem;
+  }
+
+  .menu__link {
+    background: none;
+    box-shadow: none;
+    
+  }
+
+  .menu__open {
+    display: none;
+  }
+}

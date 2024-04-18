@@ -1,0 +1,63 @@
+@import url(reset.css);
+@import url(variables.css);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--raleway);
+}
+
+.container {
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+.btn {
+  background: var(--color-blanco);
+  box-sizing: border-box;
+  display: inline-block;
+  width: fit-content;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: var(--color-text-btn);
+  transition: all 1s ease;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn:hover {
+  background: var(--color-dark);
+  color: var(--color-blanco);
+}
+
+.btn-primary {
+  background: var(--color-background-btn-primary);
+  color: var(--color-blanco);
+}
+
+.btn-primary:hover {
+  border: 2px solid var(--color-background-btn-primary);
+  background: var(--color-blanco);
+  color: var(--color-text-btn);
+}
+
+.btn-form {
+  font-size: 1.250rem;
+}
+
+.skills__title, .contacto__text__title, .formaciones__title, .hobbies__title, .portfolios__title{
+  font-size: 1.9rem;
+  color: var(--color-title-section);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: calc((100% - 940px) / 2);
+    padding-right: calc((100% - 940px) / 2);
+  }
+}
